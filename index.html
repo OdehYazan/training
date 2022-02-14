@@ -5,23 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/style.css">
-    <title>Form</title>
+    <title>Calculator</title>
 </head>
 <body>
     <div>
-        <form action="">
-            <label class="lables" for="firstName">First Name</label>
-            <input class="inputs" type="text" name="firstName" id="firstName" placeholder="Your name..">
-            <label class="lables" for="lasttName">Last Name</label>
-            <input class="inputs" type="text" name="lasttName" id="lasttName" placeholder="Your last name...">
-            <label class="lables" for="country">Country</label>
-            <select class="inputs" name="country" id="country">
-                <option value="Australia">Australia</option>
-                <option value="Australia">Australia</option>
-                <option value="Australia">Australia</option>
-            </select>
-            <button  id="btn" type="submit">Go</button>
+        <form name="calc">
+            <!-- <legend>Calculater</legend> -->
+            <input id="result" type="text" name="result" >
+            <div class="flexBox">
+           
+            <input class="opreators" type="button" value="/" onclick="result.value+='/'">
+            <input class="opreators" type="button" value="*" onclick="result.value+='*'">
+            <input class="opreators" type="button" value="+" onclick="result.value+='+'">
+            <input class="opreators" type="button" value="-" onclick="result.value+='-'">
+            <input class="opreators" type="button" value="%" onclick="result.value+='%'"><br>
+            <input class="inputs" type="button" value="0" onclick="result.value+='0'">
+            <input class="inputs" type="button" value="1" onclick="result.value+='1'">
+            <input class="inputs" type="button" value="2" onclick="result.value+='2'">
+            <input class="inputs" type="button" value="3" onclick="result.value+='3'">
+            <input class="inputs" type="button" value="4" onclick="result.value+='4'">
+            <input class="inputs" type="button" value="5" onclick="result.value+='5'">
+            <input class="inputs" type="button" value="6" onclick="result.value+='6'">
+            <input class="inputs" type="button" value="7" onclick="result.value+='7'">
+            <input class="inputs" type="button" value="8" onclick="result.value+='8'">
+            <input class="inputs" type="button" value="9" onclick="result.value+='9'">
+            <input class="inputs" type="button" value="." onclick="result.value+='.'">
+            <input  class="opreators" id="C" type="reset" value="C" onclick="reset">
+            <input type="button" value="=" onclick="result.value= calcer(result.value)">
+        </div>
+            
+            
         </form>
     </div>
+  
+   <script src="../script/script.js"></script>
 </body>
 </html>
